@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lance Ministry — Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="j.css">
+  
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- LEFT: Hamburger + Brand -->
+        <div class="flex items-center gap-3">
+          <!-- Hamburger (always visible upper-left) -->
+          <button id="hamburgerBtn"
+        aria-controls="side-menu"
+        aria-expanded="false"
+        class="ham-btn p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        title="Open menu">
+  <span class="ham-line"></span>
+  <span class="ham-line"></span>
+  <span class="ham-line"></span>
+</button>
+
+          <!-- Brand -->
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-indigo-600 to-emerald-400 flex items-center justify-center text-white font-semibold">LM</div>
+            <div class="leading-tight">
+              <div class="text-sm font-semibold">Lance Ministry</div>
+              <div class="text-xs text-gray-500">Personal ministry • Bible study resources</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact button -->
+        <div>
+          <a href="#contact"
+             class="px-4 py-2 bg-indigo-600 text-white rounded-md text-sm shadow-md transition-all duration-200
+                    hover:shadow-xl hover:ring-2 hover:ring-indigo-400 hover:ring-opacity-60">
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDE / DROPDOWN MENU (hidden by default) -->
+    <div id="side-menu" class="hidden border-t bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="space-y-1" aria-label="Main menu">
+          <a href="#home" class="block px-3 py-2 rounded hover:bg-gray-100">Home</a>
+
+          <!-- Sermons accordion -->
+          <div>
+            <button id="sermonsToggle"
+                    aria-expanded="false"
+                    class="w-full text-left px-3 py-2 rounded hover:bg-gray-100 flex items-center justify-between focus:outline-none">
+              <span>Sermons</span>
+              <svg id="sermonsChevron" class="w-4 h-4 transform transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </button>
+
+            <div id="sermonsSubmenu" class="hidden mt-1 space-y-1 pl-4">
+              <a href="sermonette.html" class=" block px-3 py-2 rounded hover:bg-gray-100">Sermonette</a>
+              <a href="revival-series.html" class="block px-3 py-2 rounded hover:bg-gray-100">Revival Series</a>
+              <a href="voy-topic.html" class="block px-3 py-2 rounded hover:bg-gray-100">VOY Topic</a>
+              <a href="youth-message.html" class="block px-3 py-2 rounded hover:bg-gray-100">Youth Message</a>
+              
+            </div>
+          </div>
+
+          <a href="bible-outline.html" class="block px-3 py-2 rounded hover:bg-gray-100">Bible Study Outline</a>
+          <a href="small-group.html" class="block px-3 py-2 rounded hover:bg-gray-100">Small Group Materials</a>
+          <a href="downloads.html" class="block px-3 py-2 rounded hover:bg-gray-100">Downloads</a>
+
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HERO -->
+  <main>
+    
+    <section id="home" 
+         class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid gap-8 md:grid-cols-2 items-center 
+                relative  w-full min-h-screen bg-cover bg-center bg-no-repeat"
+       <div class="absolute inset-0 bg-cover bg-center bg-no-repeat blur-lg scale-110"
+       style="background-image: url('creation.webp');">
+  </div>
+       <div class="absolute inset-0 bg-black/40"></div>
+      <!-- Left: description, mission/vision -->
+      <div>
+       
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-white drop-shadow-md">Lance Ministry — Equip. Teach. Send.</h1>
+        <p class="mt-4 text-gray-100 max-w-xl drop-shadow">
+          We create Scripture-centered resources and train small-group leaders so local churches can disciple people faithfully.
+          Practical materials, reproducible lesson plans, and heart-led preaching designed for students, youth, and church leaders.
+        </p>
+
+        <!-- Mission & Vision -->
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          <div class="p-4 bg-white rounded-lg shadow-sm">
+            <h3 class="font-semibold drop text-gray-900">Mission</h3>
+            <p class="mt-2 text-sm text-gray-900">To equip disciples through biblical teaching and reproducible small-group resources that multiply leaders.</p>
+          </div>
+          <div class="p-4 bg-white rounded-lg shadow-sm">
+            <h3 class="font-semibold">Vision</h3>
+            <p class="mt-2 text-sm text-gray-900">A network of healthy small groups that transform communities with the gospel.</p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-8">
+          <a href="#study-groups"
+             class="inline-flex items-center gap-3 px-6 py-3 bg-emerald-500 text-white rounded-md font-medium shadow-md
+                    hover:shadow-xl transition-all duration-200 drop-shadow-md">
+            Join the Group Study
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: visual card / featured -->
+     <div class="rounded-xl p-6 bg-white shadow-md relative overflow-hidden">
+ <div class="absolute inset-0 bg-black/40"
+        ></div>
+        <div class="text-sm text-gray-900 mb-4">Featured</div>
+ 
+
+  <!-- Content -->
+  <div class="relative">
+    
+    
+    <div class="absolute inset-0 bg-black/40"></div>
+    <article class="p-4 rounded-lg border border-gray-500 hover:shadow bg-white/200">
+       <!-- Background image -->
+       <div class="absolute inset-0 bg-cover bg-center opacity-50" 
+       style="background-image: url('Katotohanang Nagpapalaya Tuklasin si Jesus sa Propesiya.png');"></div>
+
+  <!-- Content -->
+      <h3 class="font-semibold drop-shadow-md">Katotohanang Nagpapalaya: </h3>
+      <p class="text-sm text-gray-900 mt-1 drop-shadow-md">Tuklasin si Jesus sa Propesiya</p>
+      <div class="mt-4 flex gap-2">
+      <a 
+            href="Katotohanang Nagpapalaya Tuklasin si Jesus sa Propesiya.pdf" 
+           target="_blank"
+            class="px-3 py-1 border rounded text-xs drop-shadow-md"> Preview</a>
+     <a 
+            href="Katotohanang Nagpapalaya Tuklasin si Jesus sa Propesiya.pptx" 
+           target="_blank"
+           class="px-3 py-1 bg-indigo-600 text-white rounded text-xs drop-shadow-md">Download</a>
+      </div>
+      
+ 
+
+  
+</div>
+
+
+
+    </article>
+  </div>
+</div>
+
+    </section>
+
+    <!-- STUDY GROUPS section as anchor target -->
+    <section id="study-groups" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h2 class="text-2xl font-bold">Study Groups</h2>
+      <p class="mt-2 text-gray-600 max-w-2xl">Weekly online and local groups focused on inductive study and discipleship.</p>
+
+      <div class="mt-6 grid gap-6 sm:grid-cols-2">
+        <div class="p-6 rounded-lg bg-white shadow">
+          <h3 class="font-semibold">Weekend Bible Study (Online)</h3>
+          <p class="text-sm text-gray-600 mt-2">Saturdays — 7:00 PM (Philippine Time)</p>
+          <p class="mt-3 text-sm">Leader: Lance • Focus: Book of Romans</p>
+        </div>
+
+        <div class="p-6 rounded-lg bg-white shadow">
+          <h3 class="font-semibold">Students' Devotion Circle</h3>
+          <p class="text-sm text-gray-600 mt-2">Midweek short devotionals and practical application.</p>
+        </div>
+      </div>
+    </section>
+         
+                  <article class="bg-white rounded-2xl shadow-md overflow-hidden">
+      <!-- meta / header -->
+      <header class="px-6 pt-6 pb-4">
+        <div class="flex items-start gap-4">
+          <!-- Author avatar -->
+          <img src="571307315_1928427594391018_2734676964413728652_n - Copy.jpg"
+               alt="Author photo — Lance"
+               width="72" height="72"
+               class="w-18 h-18 rounded-full object-cover shadow-sm"/>
+
+          <div class="flex-1">
+            <h1 class="text-2xl md:text-3xl font-extrabold leading-tight text-gray-900">
+              Testimony of Transformation: When Encounter Changes Everything
+            </h1>
+
+            <div class="mt-2 flex items-center gap-3 text-sm text-gray-500">
+              <div class="font-medium text-gray-700">Lance (Author)</div>
+              <div>&middot;</div>
+
+              <!-- Published date -->
+              <time datetime="2025-12-12">December 12, 2025</time>
+
+              <div>&middot;</div>
+              <div>5 min read</div>
+            </div>
+
+            <!-- tags / categories -->
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded">Testimony</span>
+              <span class="px-2 py-1 bg-emerald-50 text-emerald-700 text-xs rounded">Devotional</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- hero image -->
+      <figure class="w-full h-64 md:h-80 bg-gray-200 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=1600&auto=format&fit=crop"
+             alt="Hero image for the article"
+             class="w-full h-full object-cover"/>
+      </figure>
+
+      <!-- body -->
+      <div class="px-6 py-6 prose prose-lg max-w-none text-gray-800">
+        <p class="leading-relaxed">
+          Before I met God, I lived like a man wandering in a fog — priorities scrambled, purpose unclear. Small compromises
+          became habits; my identity was tethered to achievements and approval. I chased the high of applause and the illusion of success,
+          until one encounter changed everything.
+        </p>
+
+        <h1 class="font-bold">Who I Was Before God Found Me</h1>
+        <p class="font-bold font-medium">
+         1. I Was Driven by Fear, Not Purpose </p>
+
+        <h3>I looked productive , always busy, always in motion  but behind the busyness was fear.
+        <div><p class="text-gray-600 italic">Fear of failing. </p>
+         <div><p class="text-gray-600 italic">Fear of being rejected.</p></div>
+        <div><p class="text-gray-600 italic">Fear of disappointing people.</p></div>
+        <div><p class="text-gray-600 italic">Fear of not being “enough.”</p></div> 
+        </div> 
+        <p class="mb-4">I said “yes” to everything because I wanted people to like me. I served in church, but my identity depended on applause. When someone praised me, I felt alive. When no one noticed my effort, I felt empty and invisible.</p>
+        </h3>
+        <p class="font-bold font-medium">2. I Was a Master of Double Life</p>
+
+        <h3 class="mb-4">I smiled publicly but carried habits privately that were destroying me.
+          There were seasons when I was deep into unhealthy coping mechanisms — late-night escaping, wasting hours on digital distractions, watching things I shouldn’t watch, and pretending that “I’m fine.”
+          One example:There was a night when I felt so stressed that instead of praying, I binge-watched shows until 4 a.m., knowing I had ministry the next day. I preached with no sleep and a guilty heart, pretending everything was okay. I had turned ministry into performance because my personal life lacked integrity.
+        </h3>
+         <p class="font-bold font-medium">3. I Was Self-Centered Without Realizing It</p>
+        <h3 class="mb-4">I helped people because it made me feel good.
+I served because it made me look responsible.
+I said spiritual words but lacked spiritual substance.
+
+My prayers were short, my temper was short, and my patience was even shorter. I would snap at people quietly, get irritated fast, and then excuse myself thinking, “I’m just tired.”
+
+The truth?
+        I was spiritually empty.</h3> 
+       
+       
+       <figure class="w-full h-64 md:h-80 bg-gray-200 overflow-hidden">
+        <img src="shallow-focus-shot-well-dressed-person-reading-bible.jpg"
+             alt="Hero image for the article"
+             class="w-full h-full object-cover"/>
+       </figure>
+       <h1 class="font-bold">The encounter</h1>
+        
+        <p>
+                  One evening, during a volunteer outreach, I felt an unshakeable peace and a conviction about truth, grace, and responsibility.
+                 It wasn't dramatic fireworks — just a deep, quiet repositioning of my heart. It wasn’t during a worship service.
+                  It wasn’t during a big revival meeting.It was alone. One night. Just me, my guilt, and God. That night I opened my Bible, not out of devotion but out of duty. And the words hit me differently: “Having a form of godliness but denying its power.” It felt like someone put a mirror in front of my soul. I felt exposed. All my pretending, all my double life, all my hidden struggles — God saw everything.</p>
+
+        <div><p class="font-semibold">But instead of condemnation, I felt something unexpected:
+          an invitation.</p>
+
+        <div><p class="text-gray-600 italic">An invitation to stop pretending.</p>
+        <div><p class="text-gray-600 italic">An invitation to come clean.</p>
+        <div><p class="text-gray-600 italic mb-4">An invitation to be healed.</p>
+
+        <p>For the first time, I dropped the act. I confessed everything — the pride, the addiction to approval, the hidden habits, the exhaustion, the fears. It felt like a spiritual surgery where God cut deep but He also healed deeply.</p>
+
+      <p class="text-gray-900 italic mb-4">That encounter broke me… in the best possible way.</p>
+        </p>
+        <h1 class="font-bold">How God Changed Me — Specifically</h1>
+      <p class="font-medium mb-4">1. He Rewrote My Identity</p>
+
+      <p>I realized I didn’t need to impress anyone — God already knew the worst parts of me and still chose me.</p>
+      <p>I realized I didn’t need to impress anyone — God already knew the worst parts of me and still chose me.</p>
+      <p>I became less performance-driven and more purpose-driven.</p>
+      <p>I learned to say “no” without guilt.</p>
+      <p>I learned to say “no” without guilt.</p>
+      <p>I stopped chasing applause and started chasing obedience.</p>
+    <p class="font-medium mb-4">2. Hidden Habits Lost Their Power</p>
+
+The addictions and unhealthy patterns I carried for years didn’t vanish overnight, but their grip weakened dramatically.
+<p>I stopped running to screens for comfort.</p>
+<p>I stopped numbing myself with endless entertainment.</p>
+<p class="mb-4">Prayer became my first response, not my last resort.</p>
+
+<p>One specific change:</p>
+<p class="mb-4">I deleted apps that triggered old habits and replaced late-night escapes with nightly devotions. It felt like taking back territory the enemy stole for years.</p>
+
+<p class="font-bold mb-4">3. My Relationships Transformed</p>
+
+<p>I became less argumentative, less reactive, and less demanding.
+People felt safer around me because I finally learned to listen without judgment.
+
+Even my apologies changed. Before, I rarely admitted mistakes.
+Now, I apologize quickly — not because I’m weak, but because grace makes me humble.</p>
+
+<h1 class="font-bold mb-4">4. My Perspective on Success Shifted</h1>
+
+<p>Before, success meant:</p>
+
+<p>Being recognized</p>
+<p>Being applauded</p>
+<p>Being needed</p>
+<p>Being praised</p>
+
+<h1 class="font-bold mb-4">Now, success means something far simpler and far deeper:</h1>
+
+<p>✔ A clean heart</p>
+<p>✔ Faithfulness in the small things</p>
+<p>✔ Obedience even when unseen</p>
+<p>✔ Loving people the way Christ loves me</p>
+<p>✔ Living with integrity</p>
+
+Success for me today is not “How many people saw what I did?” but “Did God smile at what I did?”
+
+How My Life Looks Now
+
+I didn’t become perfect — far from it — but I became different.
+
+I wake up with clarity instead of fear.
+
+I serve because I’m called, not because I need validation.
+
+I guard my habits because my heart matters more than my image.
+
+I plan my days with purpose instead of pressure.
+
+I pursue holiness, not hype.
+
+I rest without feeling guilty.
+
+But the biggest change?
+I finally know who I am — not because of what I do, but because of who God is.
+
+My Life After Transformation
+
+God didn’t just fix a few behaviors.
+He rebuilt me from the inside out.
+
+He took a fearful, approval-driven, double-life believer and turned me into someone who values integrity, mission, and quiet obedience.
+
+He replaced my insecurity with identity.
+He replaced my guilt with grace.
+He replaced my performance mentality with purpose.
+
+And now, everything I do — preaching, ministry, studying, serving — flows from a place of relationship, not pressure.
+
+If there’s one thing my story proves, it’s this:
+
+God doesn’t just change your habits — He changes your heart.
+And when your heart changes, everything else follows.
+
+        <h2>What changed</h2>
+        <ul>
+          <li>Priorities became people-centered (relationships over résumé).</li>
+          <li>Success was redefined: obedience + fruitfulness, not applause.</li>
+          <li>Daily rhythms changed: prayer, Scripture, Sabbath rest.</li>
+        </ul>
+
+        <p>
+          If you are reading this, let it encourage you: one genuine encounter reorients the whole life. The result is not perfection — it's
+          a faithful journey.
+        </p>
+
+        <hr />
+
+        <p class="text-sm text-gray-500">If this encouraged you, share it with someone or join our next small group — <a href="#study-groups" class="text-indigo-600 hover:underline">Join study groups</a>.</p>
+      </div>
+
+      <!-- footer: author & actions -->
+      <footer class="px-6 py-6 border-t bg-gray-50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="https://via.placeholder.com/48" alt="Author avatar" class="w-12 h-12 rounded-full object-cover shadow-sm"/>
+          <div>
+            <div class="font-medium text-gray-800">Lance</div>
+            <div class="text-sm text-gray-600">Theology student • Missionary</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <!-- simple share links -->
+          <a href="#" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:shadow">Share</a>
+          <a href="#" class="px-3 py-2 border rounded text-sm hover:bg-gray-100">Save</a>
+        </div>
+      </footer>
+    </article>
+
+  </main>
+
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact" class="bg-white border-t mt-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid gap-6 md:grid-cols-3">
+      <div>
+        <h4 class="font-semibold">Contact</h4>
+        <p class="text-sm mt-2">Email: lance@example.com</p>
+        <p class="text-sm">Location: Philippines</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Quick Links</h4>
+        <ul class="mt-2 text-sm text-gray-600 space-y-2">
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#sermons">Sermons</a></li>
+          <li><a href="#study-groups">Study Groups</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Support</h4>
+        <p class="text-sm mt-2">If the resources help you, consider supporting the ministry.</p>
+      </div>
+    </div>
+
+    <div class="py-4 text-center text-sm text-gray-500">
+      © <span id="year"></span> Lance Ministry — Equipping Disciples.
+    </div>
+  </footer>
+
+  <!-- JS: menu toggles + year -->
+  <script>
+  // set year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+
+  /* ------------------------------
+      HAMBURGER TOGGLE
+  ------------------------------ */
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const sideMenu = document.getElementById('side-menu');
+  const menuLinks = document.querySelectorAll(".menu-link");
+
+  hamburgerBtn && hamburgerBtn.addEventListener('click', () => {
+    const isHidden = sideMenu.classList.contains('hidden');
+    sideMenu.classList.toggle('hidden');
+    hamburgerBtn.setAttribute('aria-expanded', String(isHidden));
+
+    // focus first link when opening
+    if (isHidden) {
+      const firstLink = sideMenu.querySelector('a, button');
+      firstLink && firstLink.focus();
+    }
+  });
+
+
+  /* ------------------------------
+      AUTO-CLOSE WHEN MENU ITEM IS CLICKED
+  ------------------------------ */
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      sideMenu.classList.add("hidden");
+      hamburgerBtn.setAttribute("aria-expanded", "false");
+    });
+  });
+
+
+  /* ------------------------------
+      CLOSE WHEN CLICKING OUTSIDE
+  ------------------------------ */
+  document.addEventListener('click', (e) => {
+    const isClickInsideMenu = sideMenu.contains(e.target);
+    const isClickOnButton = hamburgerBtn.contains(e.target);
+
+    if (!isClickInsideMenu && !isClickOnButton && !sideMenu.classList.contains('hidden')) {
+      sideMenu.classList.add('hidden');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+
+  /* ------------------------------
+      CLOSE ON ESCAPE KEY
+  ------------------------------ */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !sideMenu.classList.contains('hidden')) {
+      sideMenu.classList.add('hidden');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+
+  /* ------------------------------
+      SERMONS SUBMENU DROPDOWN
+  ------------------------------ */
+  const sermonsToggle = document.getElementById('sermonsToggle');
+  const sermonsSubmenu = document.getElementById('sermonsSubmenu');
+  const sermonsChevron = document.getElementById('sermonsChevron');
+
+  sermonsToggle && sermonsToggle.addEventListener('click', () => {
+    const opened = !sermonsSubmenu.classList.contains('hidden');
+    sermonsSubmenu.classList.toggle('hidden');
+    sermonsToggle.setAttribute('aria-expanded', String(!opened));
+
+    // rotate chevron
+    if (opened) {
+      sermonsChevron.classList.remove('rotate-180');
+    } else {
+      sermonsChevron.classList.add('rotate-180');
+    }
+  });
+</script>
+
+</body>
+</html>

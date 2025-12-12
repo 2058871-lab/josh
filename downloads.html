@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downloadable Resources — Lance Ministry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="j.css">
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- LEFT: Hamburger + Brand -->
+        <div class="flex items-center gap-3">
+          <button id="hamburgerBtn" aria-controls="side-menu" aria-expanded="false"
+                  class="ham-btn p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  title="Open menu">
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+          </button>
+
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-indigo-600 to-emerald-400 flex items-center justify-center text-white font-semibold">LM</div>
+            <div class="leading-tight">
+              <div class="text-sm font-semibold">Lance Ministry</div>
+              <div class="text-xs text-gray-500">Personal ministry • Bible study resources</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact button -->
+        <div>
+          <a href="#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-md text-sm shadow-md transition-all duration-200
+                    hover:shadow-xl hover:ring-2 hover:ring-indigo-400 hover:ring-opacity-60">
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDE MENU -->
+    <div id="side-menu" class="hidden border-t bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <nav class="space-y-1" aria-label="Main menu">
+          <a href="index1.html#home" class="block px-3 py-2 rounded hover:bg-gray-100">Home</a>
+
+          <div>
+            <button id="sermonsToggle" aria-expanded="false"
+                    class="w-full text-left px-3 py-2 rounded hover:bg-gray-100 flex items-center justify-between focus:outline-none">
+              <span>Sermons</span>
+              <svg id="sermonsChevron" class="w-4 h-4 transform transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div id="sermonsSubmenu" class="hidden mt-1 space-y-1 pl-4">
+              <a href="index1.html#sermonette" class="block px-3 py-2 rounded hover:bg-gray-100">Sermonette</a>
+              <a href="index1.html#revival-series" class="block px-3 py-2 rounded hover:bg-gray-100">Revival Series</a>
+              <a href="index1.html#voy-topic" class="block px-3 py-2 rounded hover:bg-gray-100">VOY Topic</a>
+              <a href="index1.html#youth-message" class="block px-3 py-2 rounded hover:bg-gray-100">Youth Message</a>
+            </div>
+          </div>
+
+          <a href="index1.html#bible-outline" class="block px-3 py-2 rounded hover:bg-gray-100">Bible Study Outline</a>
+          <a href="index1.html#small-group" class="block px-3 py-2 rounded hover:bg-gray-100">Small Group Materials</a>
+          <a href="downloads.html" class="block px-3 py-2 rounded hover:bg-gray-100">Downloads</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT: Downloads List -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-3xl font-bold">Downloadable Resources</h1>
+    <p class="mt-2 text-gray-600">Click to download materials shared by the ministry.</p>
+
+    <ul class="mt-6 space-y-3">
+      <li class="flex justify-between items-center bg-white p-3 rounded shadow hover:shadow-lg transition">
+        <span>Bible Study Outline: Romans</span>
+        <a href="https://drive.google.com/your-file-link" target="_blank"
+           class="px-4 py-2 bg-indigo-600 text-white rounded-md text-sm hover:bg-indigo-500 transition">
+          Download
+        </a>
+      </li>
+
+      <li class="flex justify-between items-center bg-white p-3 rounded shadow hover:shadow-lg transition">
+        <span>Small Group Discussion Guide</span>
+        <a href="https://drive.google.com/your-file-link" target="_blank"
+           class="px-4 py-2 bg-indigo-600 text-white rounded-md text-sm hover:bg-indigo-500 transition">
+          Download
+        </a>
+      </li>
+      <!-- Add more downloads as needed -->
+    </ul>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-white border-t mt-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid gap-6 md:grid-cols-3">
+      <div>
+        <h4 class="font-semibold">Contact</h4>
+        <p class="text-sm mt-2">Email: lance@example.com</p>
+        <p class="text-sm">Location: Philippines</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Quick Links</h4>
+        <ul class="mt-2 text-sm text-gray-600 space-y-2">
+          <li><a href="index.html#resources">Resources</a></li>
+          <li><a href="index.html#sermons">Sermons</a></li>
+          <li><a href="index.html#study-groups">Study Groups</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Support</h4>
+        <p class="text-sm mt-2">If the resources help you, consider supporting the ministry.</p>
+      </div>
+    </div>
+
+    <div class="py-4 text-center text-sm text-gray-500">
+      © <span id="year"></span> Lance Ministry — Equipping Disciples.
+    </div>
+  </footer>
+
+  <!-- JS: Menu toggles + year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const sideMenu = document.getElementById('side-menu');
+    const sermonsToggle = document.getElementById('sermonsToggle');
+    const sermonsSubmenu = document.getElementById('sermonsSubmenu');
+    const sermonsChevron = document.getElementById('sermonsChevron');
+
+    // Hamburger toggle
+    hamburgerBtn && hamburgerBtn.addEventListener('click', () => {
+      const isHidden = sideMenu.classList.contains('hidden');
+      sideMenu.classList.toggle('hidden');
+      hamburgerBtn.setAttribute('aria-expanded', String(isHidden));
+      if (isHidden) {
+        const firstLink = sideMenu.querySelector('a, button');
+        firstLink && firstLink.focus();
+      }
+    });
+
+    // Sermons submenu toggle
+    sermonsToggle && sermonsToggle.addEventListener('click', () => {
+      const opened = !sermonsSubmenu.classList.contains('hidden');
+      sermonsSubmenu.classList.toggle('hidden');
+      sermonsToggle.setAttribute('aria-expanded', String(!opened));
+      sermonsChevron.classList.toggle('rotate-180');
+    });
+
+    // Close side menu on Escape or click outside
+    document.addEventListener('click', (e) => {
+      if (!sideMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        sideMenu.classList.add('hidden');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        sideMenu.classList.add('hidden');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>
